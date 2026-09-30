@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: kivy/buildozer:latest
-      options: --user user
     
     steps:
     - name: Checkout code
@@ -23,26 +22,11 @@ jobs:
         ls -la
         python --version
         pip --version
-    
-    - name: Install buildozer
-      run: |
-        pip install --user --upgrade pip
-        pip install --user buildozer cython==0.29.36 virtualenv
-    
-    - name: Cache buildozer
-      uses: actions/cache@v4
-      with:
-        path: |
-          .buildozer
-          ~/.buildozer
-        key: buildozer-${{ runner.os }}-${{ hashFiles('buildozer.spec') }}
-        restore-keys: |
-          buildozer-${{ runner.os }}-
+        which buildozer
     
     - name: Build APK with buildozer
       run: |
-        export PATH=$PATH:~/.local/bin
-        buildozer -v android debug
+        yes | buildozer -v android debug
       continue-on-error: false
     
     - name: Upload APK
