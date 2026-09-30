@@ -9,7 +9,7 @@ source.include_exts = py,png,jpg,kv,atlas,html,css,js,json,txt
 version = 1.0.0
 
 # Зависимости Python
-requirements = python3,kivy
+requirements = python3==3.11.9,kivy==2.3.0,requests,urllib3,chardet,idna,certifi,six,filetype
 
 # Ориентация
 orientation = portrait
