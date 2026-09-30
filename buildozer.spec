@@ -9,7 +9,7 @@ source.include_exts = py,png,jpg,kv,atlas,html,css,js,json,txt
 version = 1.0.0
 
 # Зависимости Python
-requirements = python3,kivy==2.2.1,flask,flask-cors,werkzeug,jinja2,itsdangerous,click,markupsafe,blinker
+requirements = python3,kivy
 
 # Ориентация
 orientation = portrait
