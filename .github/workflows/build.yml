@@ -10,49 +10,38 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: kivy/buildozer:latest
-      options: --user root
+      options: --user user
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Fix permissions
+    - name: Show environment
       run: |
-        chown -R root:root .
-        chmod -R 755 .
-    
-    - name: Install system dependencies
-      run: |
-        apt update
-        apt install -y \
-          git zip unzip \
-          autoconf libtool pkg-config \
-          zlib1g-dev libncurses-dev \
-          cmake libffi-dev libssl-dev \
-          build-essential ccache
-    
-    - name: Show versions
-      run: |
+        whoami
+        pwd
+        ls -la
         python --version
         pip --version
     
     - name: Install buildozer
       run: |
-        pip install --upgrade pip
-        pip install buildozer cython==0.29.36 virtualenv
+        pip install --user --upgrade pip
+        pip install --user buildozer cython==0.29.36 virtualenv
     
     - name: Cache buildozer
       uses: actions/cache@v4
       with:
         path: |
           .buildozer
-          /root/.buildozer
+          ~/.buildozer
         key: buildozer-${{ runner.os }}-${{ hashFiles('buildozer.spec') }}
         restore-keys: |
           buildozer-${{ runner.os }}-
     
     - name: Build APK with buildozer
       run: |
+        export PATH=$PATH:~/.local/bin
         buildozer -v android debug
       continue-on-error: false
     
