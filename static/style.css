@@ -1,0 +1,1059 @@
+/* ============================================================
+   БАЗОВЫЕ СТИЛИ
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f0f1a;
+    color: #fff;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    min-height: 100vh;
+    position: relative;
+}
+
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(26, 35, 126, 0.15), transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(118, 75, 162, 0.1), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   ШАПКА
+   ============================================================ */
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.25);
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.logo-sub {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.header-stats {
+    display: flex;
+    gap: 20px;
+    background: rgba(255,255,255,0.04);
+    padding: 8px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.stat-label {
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   БОЛЬШОЙ МАРАФОН
+   ============================================================ */
+
+.marathon-section {
+    margin-bottom: 30px;
+}
+
+.marathon-card {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    border-radius: 16px;
+    padding: 24px 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.marathon-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.marathon-text {
+    flex: 1;
+}
+
+.marathon-badge {
+    display: inline-block;
+    background: rgba(255, 107, 0, 0.2);
+    color: #ff8f00;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.marathon-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.marathon-text p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.marathon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: #ff6f00;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.marathon-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(255, 111, 0, 0.3);
+}
+
+.marathon-btn svg {
+    stroke: #fff;
+}
+
+.marathon-progress {
+    margin-top: 16px;
+}
+
+.marathon-progress .progress-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.marathon-progress .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+.marathon-progress .progress-label {
+    display: block;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-top: 6px;
+}
+
+/* ============================================================
+   АККОРДЕОН
+   ============================================================ */
+
+.topics-section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.section-header .section-desc {
+    color: #555;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordion-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.accordion-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-emoji {
+    font-size: 22px;
+}
+
+.section-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.section-badge {
+    background: rgba(102, 126, 234, 0.15);
+    color: #667eea;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.section-arrow {
+    color: #555;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-body {
+    display: none;
+    padding: 0 20px 20px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ============================================================
+   МИНИ-МАРАФОН
+   ============================================================ */
+
+.mini-marathon {
+    margin: 16px 0;
+}
+
+.mini-marathon-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(56, 142, 60, 0.05));
+    border: 1px solid rgba(76, 175, 80, 0.15);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mini-marathon-link:hover {
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.1);
+}
+
+.mini-icon {
+    font-size: 24px;
+}
+
+.mini-text {
+    flex: 1;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.mini-count {
+    color: #4caf50;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.mini-arrow {
+    color: #4caf50;
+    font-size: 18px;
+}
+
+/* ============================================================
+   ПОДТЕМЫ
+   ============================================================ */
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.topic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.topic-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.15);
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+.topic-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.topic-name {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #ccc;
+}
+
+.topic-card:hover .topic-name {
+    color: #fff;
+}
+
+.topic-count {
+    font-size: 11px;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   СТРАНИЦА ТЕСТА (QUIZ) — ПОЛНЫЕ СТИЛИ
+   ============================================================ */
+
+.quiz-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка теста */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quiz-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.quiz-header-center {
+    flex: 1;
+    text-align: center;
+}
+
+.quiz-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.quiz-mode {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.score-badge {
+    background: rgba(102, 126, 234, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.score-badge span {
+    color: #fff;
+}
+
+/* Прогресс */
+.progress-container {
+    margin-bottom: 24px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.progress-label {
+    color: #888;
+}
+
+.progress-label strong {
+    color: #fff;
+}
+
+.progress-topic {
+    color: #667eea;
+    font-size: 13px;
+}
+
+.progress-type {
+    color: #555;
+    font-size: 13px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+/* Карточка вопроса */
+.question-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.question-number {
+    font-size: 12px;
+    color: #555;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.question-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Варианты ответов */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    color: #ccc;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+    width: 100%;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.option-btn .option-letter {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 13px;
+    color: #666;
+    flex-shrink: 0;
+}
+
+.option-btn:hover:not(:disabled) .option-letter {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.option-btn .option-text {
+    flex: 1;
+    color: #ccc;
+}
+
+.option-btn:hover:not(:disabled) .option-text {
+    color: #fff;
+}
+
+/* Правильный ответ */
+.option-btn.correct {
+    border-color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.option-btn.correct .option-letter {
+    background: #4caf50;
+    color: #fff;
+}
+
+.option-btn.correct .option-text {
+    color: #4caf50;
+}
+
+/* Неправильный ответ */
+.option-btn.wrong {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.option-btn.wrong .option-letter {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.option-btn.wrong .option-text {
+    color: #e74c3c;
+}
+
+/* Обратная связь */
+.feedback-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.feedback-card.show {
+    display: block;
+}
+
+.feedback-correct {
+    color: #4caf50;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+}
+
+.feedback-wrong {
+    color: #e74c3c;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+}
+
+.feedback-icon {
+    font-size: 20px;
+}
+
+.feedback-answer {
+    margin-top: 8px;
+    color: #888;
+    font-size: 15px;
+}
+
+.feedback-answer strong {
+    color: #fff;
+}
+
+.feedback-formula {
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: rgba(102, 126, 234, 0.08);
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.formula-label {
+    color: #888;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.formula-text {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    padding: 4px 0;
+}
+
+.feedback-hint {
+    color: #888;
+    font-size: 14px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Кнопка "Следующий" */
+.next-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.next-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+}
+
+.next-btn svg {
+    stroke: #fff;
+}
+
+/* Финальный экран */
+.finish-card {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.finish-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.finish-card h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.finish-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto 24px;
+}
+
+.finish-stat {
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.finish-stat-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.finish-stat-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.finish-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Кнопка "На главную" */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.back-btn svg {
+    stroke: currentColor;
+}
+
+.finish-actions .back-btn {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.finish-actions .back-btn:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 20px 0 10px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    margin-top: 20px;
+}
+
+.footer p {
+    color: #444;
+    font-size: 14px;
+}
+
+.footer-small {
+    font-size: 12px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   INSTALL BANNER
+   ============================================================ */
+
+.install-banner {
+    display: none;
+    background: linear-gradient(135deg, #1a237e, #283593);
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.install-banner.show {
+    display: flex;
+}
+
+.install-banner-text {
+    font-size: 13px;
+}
+
+.install-banner-text strong {
+    display: block;
+    font-size: 15px;
+}
+
+.install-banner-btn {
+    background: #fff;
+    color: #1a237e;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.install-banner-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   АДАПТИВНОСТЬ
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header-stats {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .marathon-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .marathon-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .marathon-text h2 {
+        font-size: 18px;
+    }
+
+    .marathon-card {
+        padding: 18px 20px;
+    }
+
+    .accordion-header {
+        padding: 14px 16px;
+    }
+
+    .section-name {
+        font-size: 14px;
+    }
+
+    .topics-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 8px;
+    }
+
+    .topic-card {
+        padding: 12px 8px;
+    }
+
+    .topic-name {
+        font-size: 12px;
+    }
+
+    .question-text {
+        font-size: 17px;
+    }
+
+    .option-btn {
+        font-size: 15px;
+        padding: 12px 16px;
+    }
+
+    .quiz-mode {
+        font-size: 15px;
+    }
+
+    .score-badge {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+
+    .finish-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .finish-stat-number {
+        font-size: 22px;
+    }
+
+    .next-btn {
+        font-size: 14px;
+        padding: 12px 24px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .install-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .quiz-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .quiz-mode {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .question-card {
+        padding: 16px;
+    }
+
+    .question-text {
+        font-size: 15px;
+    }
+
+    .option-btn {
+        font-size: 14px;
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .option-btn .option-letter {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+}
+
+/* ============================================================
+   WEBVIEW ОПТИМИЗАЦИЯ
+   ============================================================ */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
